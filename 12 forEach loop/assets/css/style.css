@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+table, th, td{
+	border: 2px solid #000;
+	border-collapse:collapse;
+	
+	text-align:center;
+	font-size: 24px;
+	padding: 10px;
+	text-transform: capitalize;
+	
+	
+}
+table{
+	width:80%;
+	margin: 50px auto;
+}
+th{
+	background-color: gold;
+	color: red;
+}
+td{
+	background-color: gray;
+	color: #fff;
+}
