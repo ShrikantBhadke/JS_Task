@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE-edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM</title>
+		<link
+		  rel="stylesheet"
+		  href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		  crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	  </head>
+	  <body>
+		<div class="container mt-4">
+			<form id="submitForm">
+				<div class="form-group">
+					<label for="fname">Full Name</label>
+					<input type="text" name="FullName" id="fname" class="fname form-control">
+				</div>
+				<div class="form-group">
+					<label for="education">Education</label>
+					<select name="education" id="education" class="form-control">
+						<option value="ba">BA</option>
+						<option value="bcom">B.Com.</option>
+						<option value="bsc">B.Sc.</option>
+						<option value="ma">MA</option>
+						<option value="mcom">M.Com.</option>
+						<option value="msc">M.Sc.</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="text" name="FullName" id="email" class="email form-control">
+				</div>
+				<button type="submit" class="btn btn-primary mb-4" id="subBtn">Submit</button>
+				<p id="para"></p>
+			</form>
+			
+		</div>
+		<script src="assets/js/main.js"></script>
+	  </body>
+</html>
