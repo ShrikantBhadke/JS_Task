@@ -39,7 +39,7 @@ liEle.forEach((ele)=>{
   function selectpara(para){
     let tabLi = '#' + para.innerText;
     let result = document.querySelector(tabLi);
-      console.log(result);
+      // console.log(result);
       paraEle.forEach((para1)=>{
           para1.classList.remove("activePara");
       })
