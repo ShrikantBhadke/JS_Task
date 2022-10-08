@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    padding: 20px 0px;
+    margin: 0 auto;
+    width: 1100px;
+    border: 2px solid black;
+    border-top: none;
+}
+.tapHeading{
+    list-style: none;
+
+}
+.tapHeading, .tapHeading::after, .tapHeading::before{
+    display: table;
+    clear: both;
+    width: 100%;
+}
+.tapHeading li{
+    float:left;
+    background-color: black;
+    color:white;
+    padding: 20px;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tapHeading li:hover, .tapHeading:focus,.tapHeading:active,.tapHeading .active{
+    background-color: orange;
+}
+.contPara .activePara{
+display: block;
+}
+.tabContent{
+    padding: 20px;
+    display: none;
+    
+}
+.contPara{
+    /* border: 2px solid black; */
+}
