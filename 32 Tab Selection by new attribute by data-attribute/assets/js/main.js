@@ -7,8 +7,10 @@ const selectTab =(event) =>{
     console.log(liselect);
 
   paraEle.forEach((para)=>{
-    para.style.display = "none";
+    para.classList.remove("activePara")
+    console.log(para)
   })
+
   
 }
 

@@ -32,9 +32,9 @@
 .tapHeading li:hover, .tapHeading:focus,.tapHeading:active,.tapHeading .active{
     background-color: orange;
 }
-/* .contPara .activePara{
+.contPara .activePara{
 display: block;
-} */
+}
 .tabContent{
     padding: 20px;
     display: none;
