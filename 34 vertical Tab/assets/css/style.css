@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.tabHeading{
+    background-color: #000;
+    color:#fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.tabHeading:hover, .active{
+    background-color: violet;
+}
+.tabCont{
+    display: none;
+    padding: 0 20px;
+}
+.activepara{
+    display: block;
+}
