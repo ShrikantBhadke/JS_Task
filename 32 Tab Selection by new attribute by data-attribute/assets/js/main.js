@@ -18,46 +18,46 @@ const paraEle = Array.from(document.querySelectorAll(".contPara p"));
 // })
 // ==========================================================================================
 
-// const selectedTab = (event) => {
-//   // console.log(event.target);
-//   liEle.forEach((li) => li.classList.remove("active"));
-//   event.target.classList.add("active");
-//   paraEle.forEach((para) => (para.style.display = "none"));
-//   document.getElementById(event.target.dataset.id).style.display = "block";
-// };
+const selectedTab = (event) => {
+  // console.log(event.target);
+  liEle.forEach((li) => li.classList.remove("active"));
+  event.target.classList.add("active");
+  paraEle.forEach((para) => (para.style.display = "none"));
+  document.getElementById(event.target.dataset.id).style.display = "block";
+};
 
-// liEle.forEach((li) => li.addEventListener("click", selectedTab));
+liEle.forEach((li) => li.addEventListener("click", selectedTab));
 // ==========================================================================================
 
 
 
 
 
-const selectedli = (getli) =>{
-  liEle.forEach((li)=>{
-    li.classList.remove("active")
-  })
-  getli.classList.add("active");
-}
-const selectpara = (getli) =>{
-  paraEle.forEach((para)=>{
-    para.classList.remove("activePara");
-  })
-  let selectedtabpara = document.getElementById(getli.dataset.id);
-  selectedtabpara.classList.add("activePara")
-}
+// const selectedli = (getli) =>{
+//   liEle.forEach((li)=>{
+//     li.classList.remove("active")
+//   })
+//   getli.classList.add("active");
+// }
+// const selectpara = (getli) =>{
+//   paraEle.forEach((para)=>{
+//     para.classList.remove("activePara");
+//   })
+//   let selectedtabpara = document.getElementById(getli.dataset.id);
+//   selectedtabpara.classList.add("activePara")
+// }
 
-const selectTab = (event) =>{
-  // let liEle = event.target;
-  // console.log(liEle);
-  selectedli(event.target)
-  selectpara(event.target)
+// const selectTab = (event) =>{
+//   // let liEle = event.target;
+//   // console.log(liEle);
+//   selectedli(event.target)
+//   selectpara(event.target)
 
-}
+// }
 
-liEle.forEach((li)=>{
-  li.addEventListener("click", selectTab)
-})
+// liEle.forEach((li)=>{
+//   li.addEventListener("click", selectTab)
+// })
 // ==========================================================================================
 
 
