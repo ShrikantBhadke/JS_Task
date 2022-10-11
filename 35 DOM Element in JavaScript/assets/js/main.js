@@ -1,4 +1,4 @@
-const boxDiv = document.getElementById("box")
+// const boxDiv = document.getElementById("box")
 
 
 // let ul = document.createElement("ul");
@@ -22,20 +22,31 @@ const boxDiv = document.getElementById("box")
 // document.getElementById("box").appendChild(heading);
 // console.log(document.querySelector("body").children)
 
-let newDiv = document.createElement("div");
-let heading = document.createElement("h1");
-heading.innerText = " Angular ";
-newDiv.appendChild(heading);
-let para = document.createElement("p");
-para.innerText =" I Love JavaScript";
-let ul = document.createElement("ul");
-let li = document.createElement("li");
+// let newDiv = document.createElement("div");
+// let heading = document.createElement("h1");
+// heading.innerText = " Angular ";
+// newDiv.appendChild(heading);
+// let para = document.createElement("p");
+// para.innerText =" I Love JavaScript";
+// let ul = document.createElement("ul");
+// let li = document.createElement("li");
 
-li.innerHTML = "CSS";
+// li.innerHTML = "CSS";
 
-newDiv.appendChild(para);
-ul.appendChild(li);
-newDiv.appendChild(ul);
+// newDiv.appendChild(para);
+// ul.appendChild(li);
+// newDiv.appendChild(ul);
 
-boxDiv.appendChild(newDiv);
-console.log(newDiv);
+// boxDiv.appendChild(newDiv);
+// console.log(newDiv);
+
+const boxDiv = document.getElementById("box")
+const addCss = document.querySelector(".addcss")
+
+let p = document.createElement("p");
+// p.innerText ="CSS";
+let paraText = document.createTextNode("CSS")
+p.appendChild(paraText);
+
+
+boxDiv.insertBefore(p,addCss);
