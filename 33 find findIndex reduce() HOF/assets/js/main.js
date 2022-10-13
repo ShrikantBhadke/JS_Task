@@ -77,7 +77,7 @@ let findIndex5 = 5;
 let indexid5 = companies.findIndex((comp) => comp.id === findIndex5);
 console.log(indexid5);
 
-let sumAge = ages.reduce((preVal, currVal) => (preVal += currVal), 0);
+let sumAge = ages.reduce((preVal, currVal) => (preVal + currVal), 0);
 console.log(sumAge);
 
 let Multge = ages.reduce((preVal, currVal) => (preVal *= currVal), 1);
