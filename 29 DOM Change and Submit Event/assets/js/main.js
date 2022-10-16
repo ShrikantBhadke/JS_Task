@@ -9,6 +9,7 @@ let email;
 
 const subFormData = (event)=>{
     event.preventDefault();
+    console.log(education.children)
     fname = fnameInput.value;
     education1 = education.value;
     email = emailInput.value;

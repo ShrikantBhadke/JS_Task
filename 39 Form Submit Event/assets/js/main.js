@@ -5,6 +5,7 @@ const formtable = document.getElementById("formtable");
 const maleradioBtn = document.getElementById("male");
 const femaleradioBtn = document.getElementById("female");
 const terms_and_condition = document.getElementById("terms_and_condition");
+const education = document.getElementById("education")
 let namearr = [];
 
 const onSubmitBtn = (e) => {
@@ -14,7 +15,9 @@ const onSubmitBtn = (e) => {
     fname: nameinput.value,
     email: emailinput.value,
     gender: getGender(),
-    terms: getTermsandConditionValue(getTermsandCondition()),
+    terms: getTermsandCondition(),
+    // education: education.value
+    education:education.options[education.selectedIndex].text
   };
 
   if (!obj.gender) {
@@ -26,11 +29,7 @@ const onSubmitBtn = (e) => {
     e.target.reset();
   }
 };
-if (localStorage.getItem("formdata")) {
-  namearr = JSON.parse(localStorage.getItem("formdata"));
-  formCreating(namearr);
-}
-submitForm.addEventListener("submit", onSubmitBtn);
+
 
 function creatformfirst(formdata) {
   let row = document.createElement("tr");
@@ -39,7 +38,8 @@ function creatformfirst(formdata) {
         <td>${formdata.fname}</td>
         <td>${formdata.email}</td>
         <td>${formdata.gender}</td>
-        <td>${formdata.terms}</td>
+        <td>${formdata.education}</td>
+        <td>${getTermsandConditionValue(formdata.terms)}</td>
       `;
   formtable.appendChild(row);
 }
@@ -53,7 +53,8 @@ function formCreating(arr) {
       <td>${ele.fname}</td>
       <td>${ele.email}</td>
       <td>${ele.gender}</td>
-      <td>${ele.terms}</td>
+      <td>${ele.education}</td>
+      <td>${getTermsandConditionValue(ele.terms)}</td>
       </tr> 
       `;
   });
@@ -72,18 +73,21 @@ function getGender() {
 }
 
 function getTermsandCondition() {
-  // let check = false;
-  // if(terms_and_condition.checked){
-  //   check = true;
-  // }return check;
-  return terms_and_condition.checked ? true : false;
+  let check = false;
+  if(terms_and_condition.checked){
+    check = true;
+  }return check;
 }
 
-function getTermsandConditionValue() {
+function getTermsandConditionValue(terms_and_condition) {
   let val = `<i class="fa-solid fa-xmark"></i>`;
-  if (terms_and_condition.checked) {
+  if (terms_and_condition === true) {
     val = `<i class="fa-solid fa-check"></i>`;
   }
   return val;
-  // return terms_and_condition.checked ? "Accepted" : "Not Accepted";
 }
+if (localStorage.getItem("formdata")) {
+    namearr = JSON.parse(localStorage.getItem("formdata"));
+    formCreating(namearr);
+  }
+  submitForm.addEventListener("submit", onSubmitBtn);
